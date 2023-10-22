@@ -1,9 +1,8 @@
 import time
 
 from selenium import webdriver
-from bacic_.cartPage import CartPage
 from bacic_.loginpage import LoginPage
-from bacic_.navigationBar import NavigationBar
+
 
 
 
@@ -21,12 +20,8 @@ loginPageObj.fill_password_field("amazonlilit2023@")
 time.sleep(5)
 loginPageObj.click_to_signin_button()
 
-navigationBarObj = NavigationBar(driver)
-navigationBarObj.click_to_cart_button()
 
-cartPageObj = CartPage(driver)
-cartPageObj.delete_firstProduct_from_cart()
-time.sleep(20)
+time.sleep(10)
 
 
 driver.close()
